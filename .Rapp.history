@@ -1,0 +1,28 @@
+data1 <- read.csv(file.choose(), header=T)
+data1.head
+data1
+synar<-read.csv("synar_10-13_proximities_new.csv", header=TRUE)
+getwd
+getwd()
+getwd(Users/yiftah/desktop/NYU/GRA/data)
+/
+getwd(/Users/yiftah/desktop/NYU/GRA/data)
+getwd(/Users/yiftah/desktop)
+getwd(Users/yiftah/desktop)
+setwd(/Users/yiftah/desktop/NYU/GRA/data)
+setwd("/Users/yiftah/desktop/NYU/GRA/data")
+getwd
+getwd()
+synar<-read.csv("synar_10-13_proximities_new.csv", header=TRUE)
+summary(synar)
+ls()
+sapply(synar,sd)
+sapply(synar,mean)
+xtabs(~violation + m100baseball_fields+m100basketball_courts, data = synar)
+mylogit <- glm(violation ~ m100baseball_fields + m100basketball_courts + m100charter_high_school + m100football_fields + m100parks + m100playground + m100pool_spraypark + m100private_high_school + m100public_high_school + m100public_housing + m100recreation_area + m100roadway_green_space + m100soccer_fields + m100tennis_court + m100track , data = synar, family = "binomial")
+mylogit <- glm(violation ~ m100baseball_fields + m100basketball_courts, data = synar, family= "binomial")
+summary(mylogit)
+mylogit <- glm(violation ~ m100public_high_school + m100private_high_school ,m100public_housing, data = synar, family= "binomial")
+mylogit <- glm(violation ~ m100public_high_school + m100private_high_school + m100public_housing, data = synar, family= "binomial")
+summary(mylogit)
+confint(mylogit)
